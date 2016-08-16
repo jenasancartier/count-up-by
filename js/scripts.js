@@ -1,19 +1,18 @@
-//back-end
-
-var countTo = function(total)
-
-var countBy = function(number)
-  {return (number + number);};
-
-
-
-//front-end
-
 $(document).ready(function() {
-  $("#input form").submit(function(event) {
-    var number = parseInt($("#count-by").val();
-    var total = parseInt($("#count-to").val();
+    $("#input form").submit(function(event) {
+    var countBy = parseInt($("#count-by").val());
+    var countTo = parseInt($("#count-to").val());
+    event.preventDefault();
 
-    $(".output#result").text(result);
-  });
+    var numbers = [];
+    var calculate = function(countBy, countTo) {
+      for (var i = countBy; i <= countTo; i += countBy) {
+        numbers.push(i + " ");
+      }
+    }
+    
+    calculate(countBy, countTo);
+    $("#result").append(numbers);
+
+    });
 });
