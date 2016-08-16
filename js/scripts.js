@@ -10,7 +10,15 @@ $(document).ready(function() {
         numbers.push(i + " ");
       }
     }
-    
+
+    if ((countBy < 0)||(countTo < 0)) {
+      alert("Please enter a positive number.")
+    } else if ((countBy < 0)&&(countTo < 0)) {
+      alert("Please enter a positive number.")
+    } else if (countBy > countTo) {
+      alert("Invalid number. Please enter a Count By number that is smaller than your Count To number.")
+    }
+
     calculate(countBy, countTo);
     $("#result").append(numbers);
 
